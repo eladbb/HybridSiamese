@@ -19,7 +19,7 @@
    (this might take a while and will need sufficient amount of memory)
    
 
-##Train
+## Train
 
 in order to train any of the models specified in the paper just edit the TrainModels.m script as your wish.
 
@@ -31,7 +31,8 @@ To replicate training as specified in the paper, follow the details in the paper
 * L2 config - trained with 95% of the data and hard mining factor of 0.8
 
 
-##Eval
+## Eval
+
 We supply our trained models, nirBenchmark is applicable by 
 
 
