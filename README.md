@@ -27,8 +27,16 @@ To replicate training as specified in the paper, follow the details in the paper
 * Use default learning parameters:
     * Train for 40 epochs
     * Use Learning rate of 0.01 and weight decay of 0.0005
-* Softmax config - trained with 80% of the data and hard mining factor of 0.8
-* L2 config - trained with 95% of the data and hard mining factor of 0.8
+* Softmax config
+    * train with 80% of the data
+    * hard mining factor of 0.8
+    * Learning rate of 0.01 for 75 epochs, lower by a factor of 10 for 20 epochs and again for 15 
+    * weight decay of 0.0005
+* L2 config
+    * train with 95% of the data
+    * hard mining factor of 0.8
+    * Learning rate of 0.01 for 40 epochs
+    * weight decay of 0.0005
 
 
 ## Eval
