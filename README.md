@@ -33,7 +33,7 @@ To replicate training as specified in the paper, follow the details in the paper
 
 ## Eval
 
-We supply our trained models, nirBenchmark is applicable by 
+We supply our trained models, the NIR benchmark can be evaluated using the EvaluateFar.m script
 
 
 
