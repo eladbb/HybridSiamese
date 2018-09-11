@@ -1,22 +1,22 @@
 clear
 clc
 close all
-matconvnetPath = '..\..\Matlab3rdParties\matconvnet-1.0-beta23';
+matconvnetPath = '..\Matlab3rdParties\matconvnet-1.0-beta23';
 run(fullfile(matconvnetPath,'matlab','vl_setupnn.m'))
 
-addpath('..')
+addpath('Eval','Layers')
 
 sequences = {'country', 'field', 'forest', 'indoor', 'mountain', 'oldbuilding', 'street', 'urban', 'water'};
 
 networkPaths = {'TrainedModels\L2ModelResults.mat', 'TrainedModels\SoftmaxModelResults.mat'};
-models{'L2Model', 'SoftmaxModel'}
+models = {'L2Model', 'SoftmaxModel'};
 
-stats = zeros(length(networkPaths),length(epochs));
+stats = zeros(length(networkPaths));
 for networkIdx = 1:length(networkPaths)
-	if ~exist('TrainedModels\SoftmaxModelResults.mat','file')
+	if ~exist('TrainedModels\L2ModelResults.mat','file')
 		% Create results file 
-		EvaluateValidationSetSoftmax
-		EvaluateValidationSetL2
+        EvaluateValidationSetL2
+		EvaluateValidationSetSoftmax		
 	end
 
     load(networkPaths{networkIdx})  
