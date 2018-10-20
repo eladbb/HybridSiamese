@@ -1,4 +1,4 @@
-function [net,stats] = cnn_train_dag_23_version(net, imdb, getBatch, varargin)
+function [net,stats] = cnn_train(net, imdb, getBatch, varargin)
 %CNN_TRAIN_DAG Demonstrates training a CNN using the DagNN wrapper
 %    CNN_TRAIN_DAG() is similar to CNN_TRAIN(), but works with
 %    the DagNN wrapper instead of the SimpleNN wrapper.

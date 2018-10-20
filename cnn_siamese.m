@@ -2,19 +2,18 @@ function [net, info] = cnn_siamese(imdb,varargin)
 
 run('vl_setupnn.m') ;
 
-opts.modelType = 'lenet' ;
+opts.modelType = '' ;
 opts.hardMiningFactor = 1;
 [opts, varargin] = vl_argparse(opts, varargin) ;
 opts.initializeFrom = '';
-opts.expDir = fullfile(vl_rootnn, 'data', ...
-  sprintf('cifar-%s', opts.modelType)) ;
+opts.expDir = '' ;
 [opts, varargin] = vl_argparse(opts, varargin) ;
 
-opts.dataDir = fullfile(vl_rootnn, 'data','cifar') ;
+opts.dataDir = '';
 opts.imdbPath = fullfile(opts.expDir, 'imdb.mat');
 opts.whitenData = true ;
 opts.contrastNormalization = true ;
-opts.networkType = 'simplenn' ;
+opts.networkType = '' ;
 opts.train = struct() ;
 opts.train.learningRate = 0.001 ;
 opts.train.weightDecay = 0.0005 ;

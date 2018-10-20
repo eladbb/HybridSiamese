@@ -1,7 +1,7 @@
 function [ far ] = Far95Recall( scores,labels,recall_goal,config)
 %FAR95RECALL Summary of this function goes here
 %   Detailed explanation goes here
-if strcmp(config,'softmax')
+if strcmp(config,'Softmax')
     scoresNormalized = exp(scores(:,1))./sum(exp(scores),2);
     [sortedScores,sorted_index] = sort(scoresNormalized,'descend');
 else
