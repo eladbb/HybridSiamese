@@ -16,7 +16,8 @@ networkNames = {'Softmax_100_model_hm_0'};%, 'Softmax_100_model_hm_0.8','L2_25_m
 
 batchSize = 1024;
 
-load(fullfile(datasetPath,'Vis-Nir_Train.mat'),'meta')
+%Evaluation requires to create the datasets first
+load(fullfile(datasetPath,'Vis-Nir_Train.mat'),'meta') 
 
 stats = zeros(length(networkNames));
 for networkIdx = 1:length(networkNames)
