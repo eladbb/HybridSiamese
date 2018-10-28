@@ -13,10 +13,9 @@ outputResultsDir = dataset;
 networkNames = {'Softmax_100_model_hm_0', 'Softmax_100_model_hm_0.8',...
                 'L2_40_model_hm_0', 'L2_40_model_hm_0.8'};
 
+%Evaluation requires to create the datasets first            
 testPath = fullfile('..\datasets',dataset,strcat(dataset,'_Test.mat'));
 load(testPath);
-% testData = overallTestData;
-% testLabels = overallTestLabels;
 
 batchSize = 1024;
 
